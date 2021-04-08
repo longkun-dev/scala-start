@@ -22,7 +22,7 @@ object FuncTest {
         println(result1)
 
         var point = new Point(1, 3)
-        point.move(2, 5)
+//        point.move(2, 5)
         println(point)
     }
 }

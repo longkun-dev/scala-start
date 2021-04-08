@@ -4,13 +4,18 @@ package com.scala.test
  * @author zhulongkun20@163.com
  * @since 2021/4/7 10:03 PM
  */
-class Point(xc: Int, yc: Int) {
+class Point(xc: Int, yc: Int) extends Equal {
     var x: Int = xc
     var y: Int = yc
 
-    def move(dx: Int, dy: Int): Unit = {
-        x = x + dx
-        y = y + dy
+    /**
+     * 判断是否相等
+     *
+     * @param x 参数
+     * @return 相等: true  不相等: false
+     */
+    override def isEqual(x: Any): Boolean = {
+        x.isInstanceOf[Point] && x.asInstanceOf[Point].x == x
     }
 
     override def toString: String = {
